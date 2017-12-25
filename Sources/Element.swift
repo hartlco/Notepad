@@ -30,6 +30,9 @@ public enum Element: String {
     case url = "\\[([^\\]]+)\\]\\(([^\\)\"\\s]+)(?:\\s+\"(.*)\")?\\)"
     case image = "\\!\\[([^\\]]+)\\]\\(([^\\)\"\\s]+)(?:\\s+\"(.*)\")?\\)"
 
+    case orderedList = "^([0-9]+\\. (.*)\\n)"
+    case unorderedList = "(^)([*+-] .*\\n)"
+
     /// Converts an enum value (type String) to a NSRegularExpression.
     ///
     /// - returns: The NSRegularExpression.
@@ -57,6 +60,8 @@ public enum Element: String {
         case "code": return .code
         case "url": return .url
         case "image": return .image
+        case "orderedList": return .orderedList
+        case "unorderedList": return .unorderedList
         default: return .unknown
         }
     }

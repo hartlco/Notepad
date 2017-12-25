@@ -43,6 +43,12 @@
             "regex": "[@＠][a-zA-Z0-9_]{1,20}",
             "color": "#78ddd5"
         },
+        "orderedList": {
+            "color": "#78aedd"
+        },
+        "unorderedList": {
+            "color": "#78aedd"
+        },
         "url": {
             "color": "#78aedd"
         },
