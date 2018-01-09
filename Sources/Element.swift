@@ -30,8 +30,8 @@ public enum Element: String {
     case url = "\\[([^\\]]+)\\]\\(([^\\)\"\\s]+)(?:\\s+\"(.*)\")?\\)"
     case image = "\\!\\[([^\\]]+)\\]\\(([^\\)\"\\s]+)(?:\\s+\"(.*)\")?\\)"
 
-    case orderedList = "^([0-9]+\\. (.*)\\n)"
-    case unorderedList = "(^)([*+-] .*\\n)"
+    case orderedList = "^[ \\t]*\\d+\\.[ \\t]"
+    case unorderedList = "^[ \\t]*[\\*\\-\\+][ \\t]"
 
     /// Converts an enum value (type String) to a NSRegularExpression.
     ///
