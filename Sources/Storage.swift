@@ -26,7 +26,7 @@ public class Storage: NSTextStorage {
     }
 
     /// The underlying text storage implementation.
-    var backingStore = NSTextStorage()
+    var backingStore = NSMutableAttributedString()
 
     override public var string: String {
         get {
@@ -56,6 +56,10 @@ public class Storage: NSTextStorage {
         fatalError("init(pasteboardPropertyList:ofType:) has not been implemented")
     }
     #endif
+
+    public override var fixesAttributesLazily: Bool {
+        return true
+    }
 
     /// Finds attributes within a given range on a String.
     ///
